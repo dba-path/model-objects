@@ -26,18 +26,27 @@
 
 package edu.berkeley.path.model_objects;
 
+
 import edu.berkeley.path.model_objects.jaxb.ObjectFactory;
 import edu.berkeley.path.model_objects.measurements.*;
 import edu.berkeley.path.model_objects.network.*;
 import edu.berkeley.path.model_objects.scenario.*;
 import edu.berkeley.path.model_objects.shared.*;
 import edu.berkeley.path.model_objects.dynamic.*;
+import edu.berkeley.path.model_objects.config.*;
 
 /**
  * This factory is intended to load a whole scenario from JSON/XML
  * Grouping all existing factories we can get a full model-objects representation instead of some jaxb-based elements
  */
 public class ModelObjectsFactory extends ObjectFactory {
+
+
+    /**
+     *
+     * @return  ConfigKeyTypeSet Model Object
+     */
+  public ConfigKeyTypeSet createConfigKLeyTypeSet() { return new ConfigKeyTypeSet();}
 
   /**
    * Create an instance of Actuator Model Object
