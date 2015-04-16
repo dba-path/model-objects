@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * Created by bill on 4/14/15.
  */
-public class ConfigKeyTypeSet extends edu.berkeley.path.model_objects.jaxb.ConfigKeyTypeSet {
+public class ConfigKeyTypeSet extends edu.berkeley.path.model_objects.jaxb.ConfigKeyTypesSet {
 
 
 

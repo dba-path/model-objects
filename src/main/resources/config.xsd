@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" version="2.0.2">
 
+    <xs:element name="config_valid_keys_set">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="config_valid_keys" maxOccurs="unbounded" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
 
     <xs:element name="config_valid_keys">
         <xs:complexType>
@@ -12,25 +19,34 @@
             <xs:attribute name="numeric_min" type="xs:double" use="optional"/>
             <xs:attribute name="numeric_max" type="xs:double" use="optional"/>
             <xs:attribute name="key_type" type="xs:long" use="required"/>
-            <xs:attribute name="short_desc" type="xs:string" use="required" default="0"/>
+            <xs:attribute name="short_desc" type="xs:string" use="required" />
             <xs:attribute name="long_desc" type="xs:string" use="optional"/>
-            <xs:attribute name="mod_stamp" type="xs:string" use="required" default=""/>
+            <xs:attribute name="mod_stamp" type="xs:string" use="required" />
             <xs:attribute name="crudflag" type="xs:string" use="optional"/>
+        </xs:complexType>
+    </xs:element>
+
+
+    <xs:element name="config_types_set">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="config_types" maxOccurs="unbounded" />
+            </xs:sequence>
         </xs:complexType>
     </xs:element>
 
     <xs:element name="config_types">
         <xs:complexType>
             <xs:attribute name="id" type="xs:long"/>
-            <xs:attribute name="short_desc" type="xs:string" use="required" default="0"/>
+            <xs:attribute name="short_desc" type="xs:string" use="required" />
             <xs:attribute name="long_desc" type="xs:string" use="optional"/>
             <xs:attribute name="in_use" type="xs:long" use="required"/>
-            <xs:attribute name="mod_stamp" type="xs:string" use="required" default=""/>
+            <xs:attribute name="mod_stamp" type="xs:string" use="required" />
             <xs:attribute name="crudflag" type="xs:string" use="optional"/>
         </xs:complexType>
     </xs:element>
 
-    <xs:element name="config_key_type_set">
+    <xs:element name="config_key_types_set">
         <xs:complexType>
             <xs:sequence>
                 <xs:element ref="config_key_types" maxOccurs="unbounded" />
@@ -40,11 +56,11 @@
 
     <xs:element name="config_key_types">
         <xs:complexType>
-            <xs:attribute name="id" type="xs:long"/>
-            <xs:attribute name="short_desc" type="xs:string" use="required" default="0"/>
-            <xs:attribute name="long_desc" type="xs:string" use="optional"/>
+            <xs:attribute name="id" type="xs:long" use="required"/>
+            <xs:attribute name="name" type="xs:string" use="required" />
+            <xs:attribute name="description" type="xs:string" use="optional"/>
             <xs:attribute name="in_use" type="xs:long" use="required"/>
-            <xs:attribute name="mod_stamp" type="xs:string" use="required" default=""/>
+            <xs:attribute name="mod_stamp" type="xs:string" use="required" />
             <xs:attribute name="crudflag" type="xs:string" use="optional"/>
         </xs:complexType>
     </xs:element>

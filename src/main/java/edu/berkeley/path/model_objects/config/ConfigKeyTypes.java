@@ -11,7 +11,7 @@ public class ConfigKeyTypes extends edu.berkeley.path.model_objects.jaxb.ConfigK
 
 
     @Override
-    public Long getId() {return super.id ;}
+    public long getId() {return super.id ;}
 
     @Override
     public long getInUse() {return super.inUse; }
@@ -21,15 +21,15 @@ public class ConfigKeyTypes extends edu.berkeley.path.model_objects.jaxb.ConfigK
         return super.getCrudflag();
     }
 
-    @Override
-    public String getLongDesc() { return super.getLongDesc(); }
+
+    public String getDescription() { return super.getDescription(); }
 
     @Override
     public String getModStamp() { return super.getModStamp(); }
 
-    @Override
-    public String getShortDesc() {
-        return super.getShortDesc();
+
+    public String getName() {
+        return super.getName();
     }
 
     @Override
@@ -37,7 +37,7 @@ public class ConfigKeyTypes extends edu.berkeley.path.model_objects.jaxb.ConfigK
         super.setCrudflag(value);
     }
 
-    @Override
+
     public void setId(Long value) {
         super.setId(value);
     }
@@ -47,20 +47,15 @@ public class ConfigKeyTypes extends edu.berkeley.path.model_objects.jaxb.ConfigK
         super.setInUse(value);
     }
 
-    @Override
-    public void setLongDesc(String value) {
-        super.setLongDesc(value);
-    }
+
 
     @Override
     public void setModStamp(String value) {
         super.setModStamp(value);
     }
 
-    @Override
-    public void setShortDesc(String value) {
-        super.setShortDesc(value);
-    }
 
+    public void setName(String value){super.setName(value);}
 
+    public void setDescription(String value){super.setDescription(value);}
 }
