@@ -27,19 +27,19 @@
     </xs:element>
 
 
-    <xs:element name="config_types_set">
+    <xs:element name="jax_config_types_set">
         <xs:complexType>
             <xs:sequence>
-                <xs:element ref="config_types" maxOccurs="unbounded" />
+                <xs:element ref="jax_config_types" maxOccurs="unbounded" />
             </xs:sequence>
         </xs:complexType>
     </xs:element>
 
-    <xs:element name="config_types">
+    <xs:element name="jax_config_types">
         <xs:complexType>
             <xs:attribute name="id" type="xs:long"/>
-            <xs:attribute name="short_desc" type="xs:string" use="required" />
-            <xs:attribute name="long_desc" type="xs:string" use="optional"/>
+            <xs:attribute name="name" type="xs:string" use="required" />
+            <xs:attribute name="description" type="xs:string" use="optional"/>
             <xs:attribute name="in_use" type="xs:long" use="required"/>
             <xs:attribute name="mod_stamp" type="xs:string" use="required" />
             <xs:attribute name="crudflag" type="xs:string" use="optional"/>

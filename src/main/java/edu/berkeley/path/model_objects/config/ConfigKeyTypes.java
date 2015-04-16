@@ -21,13 +21,13 @@ public class ConfigKeyTypes extends edu.berkeley.path.model_objects.jaxb.ConfigK
         return super.getCrudflag();
     }
 
-
+    @Override
     public String getDescription() { return super.getDescription(); }
 
     @Override
     public String getModStamp() { return super.getModStamp(); }
 
-
+    @Override
     public String getName() {
         return super.getName();
     }
@@ -37,8 +37,8 @@ public class ConfigKeyTypes extends edu.berkeley.path.model_objects.jaxb.ConfigK
         super.setCrudflag(value);
     }
 
-
-    public void setId(Long value) {
+    @Override
+    public void setId(long value) {
         super.setId(value);
     }
 
@@ -47,15 +47,14 @@ public class ConfigKeyTypes extends edu.berkeley.path.model_objects.jaxb.ConfigK
         super.setInUse(value);
     }
 
-
-
     @Override
     public void setModStamp(String value) {
         super.setModStamp(value);
     }
 
-
+    @Override
     public void setName(String value){super.setName(value);}
 
+    @Override
     public void setDescription(String value){super.setDescription(value);}
 }
