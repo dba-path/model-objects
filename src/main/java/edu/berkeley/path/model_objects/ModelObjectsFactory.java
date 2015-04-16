@@ -42,6 +42,9 @@ import edu.berkeley.path.model_objects.config.*;
 public class ModelObjectsFactory extends ObjectFactory {
 
 
+
+  public ConfigValidKeySet createConfigKeyValidKeySet() { return new ConfigValidKeySet();}
+
     /**
      *
      * @return  ConfigKeyTypeSet Model Object
