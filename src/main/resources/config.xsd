@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" version="2.0.2">
 
-    <xs:element name="config_valid_keys_set">
+    <xs:element name="config_valid_key_set">
         <xs:complexType>
             <xs:sequence>
-                <xs:element ref="config_valid_keys" maxOccurs="unbounded" />
+                <xs:element ref="config_valid_key" maxOccurs="unbounded" />
             </xs:sequence>
         </xs:complexType>
     </xs:element>
 
-    <xs:element name="config_valid_keys">
+    <xs:element name="config_valid_key">
         <xs:complexType>
             <xs:attribute name="id" type="xs:long"/>
             <xs:attribute name="key_func_type" type="xs:long" use="optional"/>
@@ -27,15 +27,15 @@
     </xs:element>
 
 
-    <xs:element name="jax_config_types_set">
+    <xs:element name="config_type_set">
         <xs:complexType>
             <xs:sequence>
-                <xs:element ref="jax_config_types" maxOccurs="unbounded" />
+                <xs:element ref="config_type" maxOccurs="unbounded" />
             </xs:sequence>
         </xs:complexType>
     </xs:element>
 
-    <xs:element name="jax_config_types">
+    <xs:element name="config_type">
         <xs:complexType>
             <xs:attribute name="id" type="xs:long"/>
             <xs:attribute name="name" type="xs:string" use="required" />
@@ -46,15 +46,15 @@
         </xs:complexType>
     </xs:element>
 
-    <xs:element name="config_key_types_set">
+    <xs:element name="config_key_type_set">
         <xs:complexType>
             <xs:sequence>
-                <xs:element ref="config_key_types" maxOccurs="unbounded" />
+                <xs:element ref="config_key_type" maxOccurs="unbounded" />
             </xs:sequence>
         </xs:complexType>
     </xs:element>
 
-    <xs:element name="config_key_types">
+    <xs:element name="config_key_type">
         <xs:complexType>
             <xs:attribute name="id" type="xs:long" use="required"/>
             <xs:attribute name="name" type="xs:string" use="required" />

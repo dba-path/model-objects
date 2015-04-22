@@ -1,10 +1,12 @@
 package edu.berkeley.path.model_objects.config;
 
+import edu.berkeley.path.model_objects.shared.CrudFlag;
+
 /**
  * Created by bill on 4/15/15.
  *
  */
-public class ConfigValidKeys extends edu.berkeley.path.model_objects.jaxb.ConfigValidKeys {
+public class ConfigValidKey extends edu.berkeley.path.model_objects.jaxb.ConfigValidKey {
 
 
     @Override
@@ -125,5 +127,73 @@ public class ConfigValidKeys extends edu.berkeley.path.model_objects.jaxb.Config
     @Override
     public String getCrudflag() {
         return super.getCrudflag();
+    }
+
+
+    /**
+     * Get CRUD (Create, Retrieve, Update, Delete) Action Flag for object
+     *
+     * @return CRUD Flag enumeration
+     */
+    public CrudFlag getCrudFlagEnum() {
+
+        CrudFlag flag = null;
+        // Check if CRUDFlag is null, if so return NONE enumeration
+        if (super.getCrudflag() == null) {
+            setCrudFlagEnum(CrudFlag.NONE);
+            flag = CrudFlag.NONE;
+        }
+        else {
+            switch (CrudFlag.valueOf(super.getCrudflag())) {
+                case CREATE:
+                    flag = CrudFlag.CREATE;
+                    break;
+                case RETRIEVE:
+                    flag = CrudFlag.RETRIEVE;
+                    break;
+                case UPDATE:
+                    flag = CrudFlag.UPDATE;
+                    break;
+                case DELETE:
+                    flag = CrudFlag.DELETE;
+                    break;
+                default:
+                    flag = CrudFlag.NONE;
+                    break;
+
+            }
+        }
+        return flag;
+    }
+
+    /**
+     * Set CRUD (Create, Retrieve, Update, Delete) Action Flag for object
+     *
+     * @param  flag enumeration
+     */
+    public void setCrudFlagEnum(edu.berkeley.path.model_objects.shared.CrudFlag flag) {
+        // Check if CRUDFlag is null, if so return NONE enumeration
+        if (flag == null) {
+            super.setCrudflag("NONE");
+        } else {
+            switch (flag) {
+                case CREATE:
+                    super.setCrudflag("CREATE");
+                    break;
+                case RETRIEVE:
+                    super.setCrudflag("RETRIEVE");
+                    break;
+                case UPDATE:
+                    super.setCrudflag("UPDATE");
+                    break;
+                case DELETE:
+                    super.setCrudflag("DELETE");
+                    break;
+                default:
+                    super.setCrudflag("NONE");
+                    break;
+
+            }
+        }
     }
 }

@@ -27,10 +27,10 @@
 package edu.berkeley.path.model_objects;
 
 
+import edu.berkeley.path.model_objects.config.ConfigKeyType;
 import edu.berkeley.path.model_objects.config.ConfigKeyTypeSet;
-import edu.berkeley.path.model_objects.config.ConfigKeyTypes;
+import edu.berkeley.path.model_objects.config.ConfigValidKey;
 import edu.berkeley.path.model_objects.config.ConfigValidKeySet;
-import edu.berkeley.path.model_objects.config.ConfigValidKeys;
 import edu.berkeley.path.model_objects.dynamic.*;
 import edu.berkeley.path.model_objects.jaxb.ObjectFactory;
 import edu.berkeley.path.model_objects.measurements.*;
@@ -66,16 +66,16 @@ public class ModelObjectsFactory extends ObjectFactory {
      *
      * @return configKeyTypes
      */
-    public ConfigKeyTypes createConfigKeyTypes() {
-        return new ConfigKeyTypes();
+    public ConfigKeyType createConfigKeyTypes() {
+        return new ConfigKeyType();
     }
 
     /**
      *
      * @return ValidConfigKeys
      */
-    public ConfigValidKeys createConfigValidKeys() {
-        return new ConfigValidKeys();
+    public ConfigValidKey createConfigValidKeys() {
+        return new ConfigValidKey();
     }
 
 

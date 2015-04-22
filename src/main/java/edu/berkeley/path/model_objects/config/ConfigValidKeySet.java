@@ -1,6 +1,5 @@
 package edu.berkeley.path.model_objects.config;
 
-import edu.berkeley.path.model_objects.jaxb.ConfigValidKeysSet;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,10 +7,10 @@ import java.util.List;
 /**
  * Created by bill on 4/15/15.
  */
-public class ConfigValidKeySet extends ConfigValidKeysSet{
+public class ConfigValidKeySet extends edu.berkeley.path.model_objects.jaxb.ConfigValidKeySet{
 
-    public List<ConfigValidKeys> getValidKeySet() {
-        return (List<ConfigValidKeys>) (List<?>) super.getConfigValidKeys();
+    public List<ConfigValidKey> getValidKeySet() {
+        return (List<ConfigValidKey>) (List<?>) super.getConfigValidKey();
     }
 
 
@@ -20,17 +19,17 @@ public class ConfigValidKeySet extends ConfigValidKeysSet{
      *
      * @param  confKeyTypes	List of extended Config Key Types to add
      */
-    public void setListOfValidKeys(List<ConfigValidKeys> confKeyTypes) {
+    public void setListOfValidKeys(List<ConfigValidKey> confKeyTypes) {
 
-        List<edu.berkeley.path.model_objects.jaxb.ConfigValidKeys> pSet =
-                (ArrayList<edu.berkeley.path.model_objects.jaxb.ConfigValidKeys>) configValidKeys ;
+        List<edu.berkeley.path.model_objects.jaxb.ConfigValidKey> pSet =
+                (ArrayList<edu.berkeley.path.model_objects.jaxb.ConfigValidKey>) configValidKey ;
 
         if ( pSet == null )
-            pSet = new ArrayList<edu.berkeley.path.model_objects.jaxb.ConfigValidKeys>();
+            pSet = new ArrayList<edu.berkeley.path.model_objects.jaxb.ConfigValidKey>();
 
         pSet.clear();
         pSet.addAll(confKeyTypes);
-        configValidKeys = pSet;
+        configValidKey = pSet;
     }
 
 }

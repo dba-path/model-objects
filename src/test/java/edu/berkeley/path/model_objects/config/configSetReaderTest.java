@@ -1,7 +1,7 @@
 package edu.berkeley.path.model_objects.config;
 
 
-import edu.berkeley.path.model_objects.jaxb.JaxConfigTypes;
+
 import org.junit.Test;
 import static org.junit.Assert.*;
 import java.util.ArrayList;
@@ -16,17 +16,17 @@ public class configSetReaderTest {
     @Test
     public void configSetTest() {
 
-        ArrayList<ConfigTypes> keySet = new ArrayList<ConfigTypes> ();
-        edu.berkeley.path.model_objects.config.ConfigTypes keys = new ConfigTypes();
+        ArrayList<ConfigType> keySet = new ArrayList<ConfigType> ();
+        ConfigType key = new ConfigType();
 
-        keys.setId(1L);
-        keys.setName("Le Grand Test");
-        keys.setDescription("Le Grand Description");
-        keys.setInUse(1);
-        keys.setModStamp("01-DEC-2014 23:31:12.12341234");
-        keys.setCrudflag("UPDATE");
+        key.setId(1L);
+        key.setName("Le Grand Test");
+        key.setDescription("Le Grand Description");
+        key.setInUse(1);
+        key.setModStamp("01-DEC-2014 23:31:12.12341234");
+        key.setCrudflag("UPDATE");
 
-        keySet.add(keys);
+        keySet.add(key);
 
         assertEquals(1,keySet.get(0).getId().longValue());
         assertEquals("le grand test",keySet.get(0).getName().toLowerCase());
